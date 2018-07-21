@@ -1,0 +1,15 @@
+2018-07-21 09:29:55.572  [http-nio-8085-exec-9] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlog:] [193a9ddb2136b288,f36d907f97730699] - ==>  Preparing: select id,tags ,content,create_time,title from blog a order by a.create_time desc limit ?, ? 
+2018-07-21 09:29:55.585  [http-nio-8085-exec-9] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlog:] [193a9ddb2136b288,f36d907f97730699] - ==> Parameters: 0(Integer), 2(Integer)
+2018-07-21 09:29:55.602  [http-nio-8085-exec-9] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlog:] [193a9ddb2136b288,f36d907f97730699] - <==      Total: 2
+2018-07-21 09:29:55.706  [http-nio-8085-exec-9] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlogCount:] [193a9ddb2136b288,f36d907f97730699] - ==>  Preparing: select count(id) from blog a 
+2018-07-21 09:29:55.712  [http-nio-8085-exec-9] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlogCount:] [193a9ddb2136b288,f36d907f97730699] - ==> Parameters: 
+2018-07-21 09:29:55.714  [http-nio-8085-exec-9] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlogCount:] [193a9ddb2136b288,f36d907f97730699] - <==      Total: 1
+2018-07-21 09:29:58.657  [http-nio-8085-exec-10] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlog:] [d740050f0e32959b,04924fba8654671a] - ==>  Preparing: select id,tags ,content,create_time,title from blog a WHERE id = ? order by a.create_time desc limit ?, ? 
+2018-07-21 09:29:58.658  [http-nio-8085-exec-10] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlog:] [d740050f0e32959b,04924fba8654671a] - ==> Parameters: 1(Integer), 0(Integer), 1(Integer)
+2018-07-21 09:29:58.660  [http-nio-8085-exec-10] DEBUG [com.mooc.house.comment.mapper.BlogMapper.selectBlog:] [d740050f0e32959b,04924fba8654671a] - <==      Total: 1
+2018-07-21 09:29:58.678  [http-nio-8085-exec-1] DEBUG [com.mooc.house.comment.mapper.CommentMapper.selectBlogComments:] [d740050f0e32959b,ea3670231e6db7a9] - ==>  Preparing: select id, content, house_id, create_time, blog_id, type, user_id from comment where type = 2 and blog_id = ? order by create_time desc limit ? 
+2018-07-21 09:29:58.680  [http-nio-8085-exec-1] DEBUG [com.mooc.house.comment.mapper.CommentMapper.selectBlogComments:] [d740050f0e32959b,ea3670231e6db7a9] - ==> Parameters: 1(Long), 8(Integer)
+2018-07-21 09:29:58.685  [http-nio-8085-exec-1] DEBUG [com.mooc.house.comment.mapper.CommentMapper.selectBlogComments:] [d740050f0e32959b,ea3670231e6db7a9] - <==      Total: 4
+2018-07-21 09:30:11.833  [http-nio-8085-exec-2] DEBUG [com.mooc.house.comment.mapper.CommentMapper.selectComments:] [3c898482f3fdd92d,681e70c66a4e64f0] - ==>  Preparing: select id, content, house_id, create_time, blog_id, type, user_id from comment where type =1 and house_id = ? order by create_time desc limit ? 
+2018-07-21 09:30:11.834  [http-nio-8085-exec-2] DEBUG [com.mooc.house.comment.mapper.CommentMapper.selectComments:] [3c898482f3fdd92d,681e70c66a4e64f0] - ==> Parameters: 25(Long), 8(Integer)
+2018-07-21 09:30:11.836  [http-nio-8085-exec-2] DEBUG [com.mooc.house.comment.mapper.CommentMapper.selectComments:] [3c898482f3fdd92d,681e70c66a4e64f0] - <==      Total: 2
